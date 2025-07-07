@@ -22,30 +22,22 @@ A command-line tool to calculate nightly pay for babysitting based on family-spe
 
 ## Usage
 
-You can run the CLI in two ways:
+You can run the CLI locally using `npm exec`:
 
-* Using `npx` (for zero-install):
+```bash
+npm exec babysit -- --start <hour> --end <hour> --family <A|B|C>
+```
 
-  ```bash
-  npx babysit --start <hour> --end <hour> --family <A|B|C>
-  ```
+## Options
 
-* Using `npm exec` (with an explicit double-dash to forward args):
-
-  ```bash
-  npm exec babysit -- --start 17 --end 1 --family A
-  ```
-
-### Options
-
-* `-s, --start <time>`  Start time (24-hour hour only, e.g. `17` for 5 PM or `1` for 1 AM)
+* `-s, --start <time>`  Start time (24‑hour hour only, e.g. `17` for 5 PM or `1` for 1 AM)
 * `-e, --end <time>`    End time (same format)
 * `-f, --family <A|B|C>` Family: `A`, `B`, or `C`
 
-### Example
+## Example
 
 ```bash
-npx babysit --start 17 --end 1 --family A
+npm exec babysit -- --start 17 --end 1 --family A
 # Output: 130
 ```
 
